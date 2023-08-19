@@ -12,5 +12,6 @@ Terraform  (Ansible.tf)
 4. update the ip from terraform output onto inventory
 
 Ansible (automate-key.yaml)
-1. ansible-playbook automate-key.yaml -i inventory --user ubuntu --key-file ansible-key.pem  
+1. export ANSIBLE_HOST_KEY_CHECKING=False
+2. ansible-playbook automate-key.yaml -i inventory --user ubuntu --key-file ansible-key.pem  
 
