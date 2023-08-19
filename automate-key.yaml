@@ -1,0 +1,14 @@
+---
+- name: "Automate key connection"
+  hosts: setuphost
+  vars:
+    - status : "present"
+    - key : "~/.ssh/id_rsa.pub"
+
+  tasks:
+
+  - name: "copy the pub key"
+    ansible.posix.authorized_key:
+      user: "{{ansible_user}}"
+      state: "{{status}}"
+      key: "{{ lookup('file', '{{ key }}')}}"
