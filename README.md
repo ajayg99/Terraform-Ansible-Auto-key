@@ -8,8 +8,9 @@ Update the variables.tf for EC2 instance type and number of instance. The sg ing
 Terraform  (Ansible.tf)
 1. terraform init
 2. terraform plan
-3. terraform apply
-4. terraform output >> inventory
+3. terraform apply --auto-approve
+4. update the ip from terraform output onto inventory
 
 Ansible (automate-key.yaml)
 1. ansible-playbook automate-key.yaml -i inventory --user ubuntu --key-file ansible-key.pem  
+
