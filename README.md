@@ -1,5 +1,5 @@
 # Terraform-Ansible-Auto-key
-Create EC2 instances with terraform(Infrastructure Management) and utilize ansible(configuration Management) playbook to copy localhost keys to EC2 instances
+Create EC2 instances with terraform(Infrastructure Management) and utilize ansible(configuration Management) playbook to copy localhost public key to EC2 instances
 
 
 Update the variables.tf for EC2 instance type and number of instance. The sg ingress allows only ssh traffic and egress allows all traffic from the instance. 
